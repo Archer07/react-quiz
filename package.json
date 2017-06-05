@@ -1,0 +1,8 @@
+{
+  "name": "react-quiz",
+  "version": "1.0.0",
+  "description": "Simple Quiz app built with react",
+  "main": "app.js",
+  "author": "Ayoub Nejjari <raysoflee07@gmail.com>",
+  "license": "MIT"
+}
