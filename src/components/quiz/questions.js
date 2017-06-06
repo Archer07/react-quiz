@@ -75,4 +75,4 @@ let Questions = [
   }
 ];
 
-export defalt Questions
+export default Questions
