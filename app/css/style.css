@@ -1,17 +1,9 @@
-span.label {
-  margin-left: 1em;
-  font-size: 1.2em;
+ul.questions {
+  list-style-type: none;
 }
 
+ul.questions li {
+  font-size: 1.4em;
+  padding: .5em;
 
-.list-group {
-  margin-top: 1em;
-  margin-left: 1em;
-}
-
-.repo-body {
-  padding: 1em;
-}
-.search-form {
-  margin-bottom: 2em 0;
 }

@@ -4,11 +4,20 @@ import Question from './Question.jsx';
 
 
 class QuestionList extends Component {
+
   render() {
+
     return (
-      <div>
-        <h1>QuestionList</h1>
-        <Question/>
+      <div className="container-fluid">
+        <div className='col-md-6 col-md-offset-2'>
+        {
+          this.props.questions.map(question => {
+          if (question.id == this.props.current) {return <Question question={question} key={question.id} {...this.pros} />;}
+        })
+        }
+        <a className="btn btn-success pull-right">Submit</a>
+        </div>
+
       </div>
     );
   }
