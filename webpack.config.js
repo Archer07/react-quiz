@@ -8,7 +8,7 @@ module.exports = {
     modules:[__dirname, 'node_modules'],
     alias: {
     },
-    extensions: ['*','.js', '.jsx'] 
+    extensions: ['*','.js', '.jsx']
   },
 	module: {
 		loaders: [
@@ -21,5 +21,6 @@ module.exports = {
 			exclude: /(node_modules)/
 			}
 		]
-	}
+	},
+	devtool: 'eval-source-map'
 }

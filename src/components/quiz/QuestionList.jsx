@@ -12,7 +12,7 @@ class QuestionList extends Component {
         <div className='col-md-6 col-md-offset-2'>
         {
           this.props.questions.map(question => {
-          if (question.id == this.props.current) {return <Question question={question} key={question.id} {...this.pros} />;}
+          if (question.id == this.props.current) {return <Question question={question} key={question.id} {...this.props} />;}
         })
         }
         <a className="btn btn-success pull-right">Submit</a>

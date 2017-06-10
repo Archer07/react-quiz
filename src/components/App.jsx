@@ -18,10 +18,10 @@ class App extends Component {
   setCurrent(current) {
     this.setState({
       current
-    })
+    });
   }
   setScore(score) {
-    this.setState({score})
+    this.setState({score});
   }
   render() {
     return (

@@ -9,10 +9,7 @@ class Question extends Component {
     e.preventDefault();
     const {setCurrent, SetScore, question} = this.props;
     let selected = e.target.value;
-    if (selected == question.correct) {
-      setScore(this.props.score+1);
-
-    }
+    if (selected == question.correct) {setScore(this.props.score+1);}
     setCurrent(this.props.current+1);
   }
   render() {
@@ -24,7 +21,7 @@ class Question extends Component {
             {
               question.choices.map((choice) => {
                 return (
-                  <li><input type="radio" ref="answer" onChange={this.onChange.bind(this)} value={choice.id} /> {choice.id}: {choice.text}</li>
+                  <li><input type="radio" name="answer" ref="answer" onChange={this.onChange.bind(this)} value={choice.id} /> {choice.id}: {choice.text}</li>
                 );
               })
             }
