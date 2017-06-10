@@ -15,10 +15,18 @@ class App extends Component {
       current:1
     }
   }
+  setCurrent(current) {
+    this.setState({
+      current
+    })
+  }
+  setScore(score) {
+    this.setState({score})
+  }
   render() {
     return (
       <div>
-        <QuestionList {...this.state} />
+        <QuestionList {...this.state} setCurrent={this.setCurrent.bind(this)} setScore={this.setScore.bind(this)} />
       </div>
     );
   }

@@ -1,13 +1,19 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 
 class Question extends Component {
   // onSave() {
   //   document.geteledisabled = true;
   //   return;
   // }
-  onChange() {
-    return;
+  onChange(e) {
+    e.preventDefault();
+    const {setCurrent, SetScore, question} = this.props;
+    let selected = e.target.value;
+    if (selected == question.correct) {
+      setScore(this.props.score+1);
+
+    }
+    setCurrent(this.props.current+1);
   }
   render() {
     const {question} = this.props;
@@ -18,7 +24,7 @@ class Question extends Component {
             {
               question.choices.map((choice) => {
                 return (
-                  <li><input type="radio" name="answer" onChange={this.onChange.bind(this)} value={choice.id}/> {choice.id}: {choice.text}</li>
+                  <li><input type="radio" ref="answer" onChange={this.onChange.bind(this)} value={choice.id} /> {choice.id}: {choice.text}</li>
                 );
               })
             }
