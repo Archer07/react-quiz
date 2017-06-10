@@ -5,6 +5,7 @@ import QuestionList from './quiz/QuestionList.jsx';
 import Questions from './quiz/questions.js';
 import ScoreBox from './quiz/ScoreBox.jsx';
 import CongratsMsg from './quiz/CongratsMsg.jsx';
+import TryAgain from './quiz/TryAgain.jsx';
 
 
 class App extends Component {
@@ -28,16 +29,21 @@ class App extends Component {
   }
   render() {
     let congrats = () => {
-      if (this.state.score === this.state.questions.length) {
-        return (<CongratsMsg />);
+      if (this.state.current > this.state.questions.length) {
+        if (this.state.score === this.state.questions.length) {return (<CongratsMsg />);}
+          return (<TryAgain />);
       }
+    }
+    let scorelog = () => {
+      while (this.state.current <= this.state.questions.length) {
+        return (<ScoreBox {...this.state}/>);
+      }
+      return;
     }
     return (
       <div>
-      {
-        congrats()
-      }
-      <ScoreBox {...this.state}/>
+      {congrats()}
+      {scorelog()}
         <QuestionList {...this.state} setCurrent={this.setCurrent.bind(this)} setScore={this.setScore.bind(this)} />
 
       </div>
