@@ -15,7 +15,6 @@ class QuestionList extends Component {
           if (question.id == this.props.current) {return <Question question={question} key={question.id} {...this.props} />;}
         })
         }
-        <a className="btn btn-success pull-right">Submit</a>
         </div>
 
       </div>

@@ -7,10 +7,13 @@ class Question extends Component {
   // }
   onChange(e) {
     e.preventDefault();
-    const {setCurrent, SetScore, question} = this.props;
+    //console.log('value captured');
+    const {setCurrent, setScore, question} = this.props;
     let selected = e.target.value;
     if (selected == question.correct) {setScore(this.props.score+1);}
-    setCurrent(this.props.current+1);
+    if (this.props.current < this.props.questions.length) {
+      setCurrent(this.props.current+1);
+    } 
   }
   render() {
     const {question} = this.props;

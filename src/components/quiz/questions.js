@@ -16,7 +16,7 @@ let Questions = [
         "text": "Paris"
       }
     ],
-    "correct":"a"
+    "correct":"c"
     },
     {
       "id": 2,
